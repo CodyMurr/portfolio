@@ -27,9 +27,13 @@ $hundo: 100%;
     align-items: $ctr;
 }
 
-@mixin fullLW() {
+@mixin fullWH() {
     width: 100vw;
     height: 100vh;
+}
+
+@mixin body-child {
+    width: $hundo - 10%;
 }
 
 // Global Selectors
@@ -40,23 +44,41 @@ $hundo: 100%;
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+header, main, footer {
+    @include body-child();
+}
+
 body {
-    @include fullLW();
+    font-family: 'Coda';
+    align-items: $ctr;
+    @include flexCol();
+    @include fullWH();
     header {
+        @include flexCol();
         &, nav, ul {
             width: $hundo;
+        }
+        nav {
+            ul {
+                @include flexRow();
+                justify-content: $spEv;
+            }
+        }
+    }
+    main {
+        &, section {
+            @include flexCol();
         }
     }
 }
 
-a {
 
-}
-
-main {
-
-}
-
-main > section {
-
-}

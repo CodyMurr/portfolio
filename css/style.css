@@ -4,12 +4,42 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+header, main, footer {
+  width: 90%;
+}
+
 body {
+  font-family: "Coda";
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
 }
+body header {
+  display: flex;
+  flex-direction: column;
+}
 body header, body header nav, body header ul {
   width: 100%;
+}
+body header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+body main, body main section {
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */
