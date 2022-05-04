@@ -81,4 +81,8 @@ body {
     }
 }
 
-
+#skills {
+    .skill {
+        @include flexCol();
+    }
+}
