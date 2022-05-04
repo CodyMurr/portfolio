@@ -1,0 +1,62 @@
+// Variables
+
+$col: column;
+$ctr: center;
+$spEv: space-evenly;
+$hundo: 100%;
+
+// Mixins/Functions
+
+@mixin flexCol() {
+    display: flex;
+    flex-direction: $col;
+}
+
+@mixin flexRow() {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin ctr-ctr() {
+    justify-content: $ctr;
+    align-items: $ctr;
+}
+
+@mixin even() {
+    justify-content: $spEv;
+    align-items: $ctr;
+}
+
+@mixin fullLW() {
+    width: 100vw;
+    height: 100vh;
+}
+
+// Global Selectors
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @include fullLW();
+    header {
+        &, nav, ul {
+            width: $hundo;
+        }
+    }
+}
+
+a {
+
+}
+
+main {
+
+}
+
+main > section {
+
+}
