@@ -4,31 +4,101 @@
   box-sizing: border-box;
 }
 
+html {
+  background-image: url('../assets/images/noise.png');
+}
+
 body {
   font-family: "Coda";
   align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: #2A2D34;
+  width: 100%;
+  height: 100%;
+  background-color: #2a2d34de;
   color: #DEE2E6;
 }
 
 header {
   align-items: center;
-  height: 300px;
+  justify-content: space-around;
+  height: 70vh;
+  background-color: #2a2d34;
+  clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 100%);
+  position: relative;
 }
 
-header h1 {
-  font-size: 3em;
+header #info {
+  width: 100%;
+  height: 30%;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-header p {
+header #info h1 {
+  font-weight: 550;
+  font-size: 2.5em;
+}
+
+header #info p {
   font-size: 1rem;
 }
 
-header h1,
-header p {
+header #info h1,
+header #info p {
   letter-spacing: 2px;
+}
+
+header #primary-nav {
+  position: absolute;
+  /* border: 3px solid #787878; */
+  margin: 0;
+  height: 30px;
+  top: 0;
+  
+}
+
+header #primary-nav ul {
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+header #primary-nav ul li {
+  width: 15%;
+  text-align: center;
+}
+
+header #primary-nav ul li a{
+  color: #42F2F7;
+  z-index: 2;
+}
+
+header #primary-nav ul li:hover {
+  background-color: #42f1f756;
+  color: #2a2d34;
+  border-radius: 1.5vmin;
+
+}
+
+header #secondary-nav {
+  margin: 2% 0;
+  width: 100%;
+  height: 25%;
+  justify-content: center;
+}
+
+header #secondary-nav ul {
+  justify-content: space-evenly;
+  width: 50%;
+  margin: 0;
+  padding-left: 0;
+}
+header #secondary-nav ul li {
+  margin: 0 5%;
+}
+
+header #secondary-nav ul li img {
+  width: 40px;  
+  height: 40px;  
 }
 
 a {
@@ -50,7 +120,7 @@ img {
   height: 100px;
 }
 
-body, header, main, section {
+body, header, main, section, header #info {
   display: flex;
   flex-direction: column;
 }
@@ -82,15 +152,6 @@ nav ul {
   
 }
 
-nav ul li {
-  width: 25%;
-  text-align: center;
-}
-
-nav ul li a{
-  color: #009B72;
-
-}
 nav ul li:hover,
 nav ul li a:hover {
   transform: scale(1.2);
@@ -110,7 +171,6 @@ ul.content li {
   height: 150px;
   margin: 2%;
   border-radius: 1.5vmin;
-
 }
 
 ul.content li h4 {
@@ -130,14 +190,14 @@ ul.content li h4 {
 }
 
 #home .intro #intro-img {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   transform: rotate(12deg);
 }
 
 #home .intro summary {
-  width: 50%;
+  width: 40%;
 }
 
 #home .intro summary p {
@@ -147,36 +207,16 @@ ul.content li h4 {
   text-align: justify;
 }
 
-#home .intro summary nav {
-  margin: 2% 0;
+
+
+#home .intro summary aside {
   width: 100%;
-  justify-content: space-between;
-  /* border: 3px solid #787878; */
+  justify-content: center;
+  margin-top: 2%;
 }
 
-#home .intro summary nav ul {
-  justify-content: flex-start;
-  /* border: 3px solid #787878; */
-  width: 40%;
-  margin: 0;
-  padding-left: 0;
-}
-#home .intro summary nav ul li {
-  margin: 0 5%;
-}
-
-#home .intro summary nav ul li img {
-  width: 50px;  
-  height: 50px;  
-}
-
-#home .intro summary nav aside {
-  width: 60%;
-  justify-content: flex-end;
-}
-
-#home .intro summary nav aside .btn {
-  width: 45%;
+#home .intro summary aside .btn {
+  width: 35%;
   justify-content: center;
   align-items: center;
   margin: 0 2%;
@@ -187,14 +227,14 @@ ul.content li h4 {
   box-shadow: 4px 4px 10px #030404;
 }
 
-#home .intro summary nav .btn:hover {
+#home .intro summary .btn:hover {
   background-color: #42F2F7;
   color: #2A2D34;
   transform: scale(1.1);
   transition: all .4s;
 }
 
-#home .intro summary nav .btn:active {
+#home .intro summary .btn:active {
   box-shadow: 2px 2px 3px;
 }
 
