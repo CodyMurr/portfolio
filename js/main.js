@@ -25,7 +25,7 @@ const skills = [
   },
   {
     name: 'Express',
-    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
   },
   {
     name: 'Javascript',
@@ -44,10 +44,6 @@ const skills = [
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg',
   },
   {
-    name: 'NPM',
-    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg',
-  },
-  {
     name: 'MongoDB',
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
   },
@@ -58,10 +54,6 @@ const skills = [
   {
     name: 'Python3',
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-  },
-  {
-    name: 'Webpack',
-    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg',
   },
   {
     name: 'VSCode',
@@ -76,22 +68,20 @@ const skills = [
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
   },
   {
-    name: 'Bash',
-    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-plain.svg',
-  },
-  {
     name: 'Heroku',
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-plain.svg',
   },
 ];
 
-const skillSection = document.querySelector('#skills > .content');
+const skillSection = document.querySelector('.content');
 
-for (let i = 0; i < skills.length; i++) {
-  const img = document.createElement('img');
-  const h4 = document.createElement('h4');
-  img.src = skills[i].src;
-  h4.innerHTML = skills[i].name;
-  skillSection.appendChild(img);
-  skillSection.appendChild(h4);
-}
+skills.forEach((skill) => {
+  let li = document.createElement('li');
+  let img = document.createElement('img');
+  let h4 = document.createElement('h4');
+  img.src = skill.src;
+  h4.innerHTML = skill.name;
+  li.appendChild(img);
+  li.appendChild(h4);
+  skillSection.appendChild(li);
+});
