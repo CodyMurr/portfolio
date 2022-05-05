@@ -10,6 +10,25 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: #2A2D34;
+  color: #DEE2E6;
+}
+
+header {
+  align-items: center;
+  height: 300px;
+}
+
+header h1 {
+  font-size: 3em;
+}
+
+header p {
+  font-size: 1rem;
+}
+
+header h1,
+header p {
+  letter-spacing: 2px;
 }
 
 a {
@@ -22,6 +41,10 @@ ul {
   flex-direction: row;
 }
 
+nav, ul, aside, .btn {
+  display: flex;
+}
+
 img {
   width: 75px;
   height: 100px;
@@ -32,18 +55,18 @@ body, header, main, section {
   flex-direction: column;
 }
 
-header {
-  height: 300px;
-}
-
 section {
   justify-content: center;
   /* border: 3px solid #787878; */
   align-items: center;
 }
+section h2 {
+  letter-spacing: 2px;
+}
 
 section hr {
   width: 20%;
+  margin-bottom: 2%;
 }
 
 header, main, footer {
@@ -86,8 +109,8 @@ ul.content li {
   width: 150px;
   height: 150px;
   margin: 2%;
-  border: 3px solid #787878;
   border-radius: 1.5vmin;
+
 }
 
 ul.content li h4 {
@@ -96,9 +119,89 @@ ul.content li h4 {
   align-items: center;
 }
 
+#home {
+  margin: 3% 0;
+}
+
+#home .intro {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+#home .intro #intro-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  transform: rotate(12deg);
+}
+
+#home .intro summary {
+  width: 50%;
+}
+
+#home .intro summary p {
+  width: 100%;
+  font-size: 1.25em;
+  letter-spacing: 2px;
+  text-align: justify;
+}
+
+#home .intro summary nav {
+  margin: 2% 0;
+  width: 100%;
+  justify-content: space-between;
+  /* border: 3px solid #787878; */
+}
+
+#home .intro summary nav ul {
+  justify-content: flex-start;
+  /* border: 3px solid #787878; */
+  width: 40%;
+  margin: 0;
+  padding-left: 0;
+}
+#home .intro summary nav ul li {
+  margin: 0 5%;
+}
+
+#home .intro summary nav ul li img {
+  width: 50px;  
+  height: 50px;  
+}
+
+#home .intro summary nav aside {
+  width: 60%;
+  justify-content: flex-end;
+}
+
+#home .intro summary nav aside .btn {
+  width: 45%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2%;
+  border: 2px solid #42F2F7;
+  color: #42F2F7;
+  border-radius: .75vmin;
+  font-size: 1.2em;
+  box-shadow: 4px 4px 10px #030404;
+}
+
+#home .intro summary nav .btn:hover {
+  background-color: #42F2F7;
+  color: #2A2D34;
+  transform: scale(1.1);
+  transition: all .4s;
+}
+
+#home .intro summary nav .btn:active {
+  box-shadow: 2px 2px 3px;
+}
+
 #skills {
   min-height: 200px;
 }
+
 #skills ul {
   width: 100%;
 }
