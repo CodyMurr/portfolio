@@ -1,4 +1,5 @@
-const skills = [
+const skills = {
+  group1: [
   {
     name: 'HTML5',
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
@@ -30,7 +31,8 @@ const skills = [
   {
     name: 'Javascript',
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-  },
+  }],
+  group2: [
   {
     name: 'NodeJS',
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg',
@@ -56,32 +58,58 @@ const skills = [
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
   },
   {
-    name: 'VSCode',
-    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg',
-  },
-  {
-    name: 'GitHub',
-    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
-  },
-  {
     name: 'Git',
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
-  },
-  {
-    name: 'Heroku',
-    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-plain.svg',
-  },
-];
+  }]
+};
 
-const skillSection = document.querySelector('.content');
+let initialGroup, activeGroup, currentGroup;
 
-skills.forEach((skill) => {
-  let li = document.createElement('li');
-  let img = document.createElement('img');
-  let h4 = document.createElement('h4');
-  img.src = skill.src;
-  h4.innerHTML = skill.name;
-  li.appendChild(img);
-  li.appendChild(h4);
-  skillSection.appendChild(li);
-});
+const skillSection = document.querySelector('.content')
+const toggleEl = document.querySelector('.toggle');
+const inputs = Array.from(document.querySelectorAll('div.toggle > input'));
+
+toggleEl.addEventListener('click', function(e) {
+  if (!e.target.value) return
+  activeGroup = e.target.value;
+  render();
+})
+
+init()
+
+function init() {
+  skillSection.className = 'content';
+  initialGroup = 'group1';
+  activeGroup = initialGroup;
+  render();
+}
+
+function render() {
+  currentGroup = inputs.find(inp => inp.value === activeGroup);
+  currentGroup.checked = true;
+  renderList(skills[activeGroup]);
+}
+
+function renderList(arr) {
+  clearList()
+  arr.map(el => createSkillEl(el))
+}
+
+function createSkillEl(skill) {
+    let li = document.createElement('li');
+    let img = document.createElement('img');
+    let h4 = document.createElement('h4');
+    img.src = skill.src;
+    h4.innerHTML = skill.name;
+    li.appendChild(img);
+    li.appendChild(h4);
+    skillSection.appendChild(li);
+}
+
+function clearList() {
+  skillSection.replaceChildren();
+}
+
+// skills.forEach((skill) => {
+// });
+
