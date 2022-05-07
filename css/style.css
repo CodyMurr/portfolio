@@ -19,17 +19,23 @@ body {
 
 header {
   align-items: center;
-  justify-content: space-around;
-  height: 70vh;
+  justify-content: center;
   background-color: #2a2d34;
+  height: 60vh;
   clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 100%);
   position: relative;
 }
 
+header hr {
+  width: 40%;
+  margin: 1% 0 2% 0;
+}
+
 header #info {
   width: 100%;
-  height: 30%;
-  justify-content: flex-end;
+  /* border: 3px solid #787878; */
+  height: 20%;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -39,7 +45,13 @@ header #info h1 {
 }
 
 header #info p {
-  font-size: 1rem;
+  font-size: 1.25rem;
+  color: #DEE2E6;
+}
+
+header #info p span {
+  color: #42F2F7;
+  font-size: 1.45rem;
 }
 
 header #info h1,
@@ -49,7 +61,6 @@ header #info p {
 
 header #primary-nav {
   position: absolute;
-  /* border: 3px solid #787878; */
   margin: 0;
   height: 30px;
   top: 0;
@@ -72,18 +83,13 @@ header #primary-nav ul li a{
   z-index: 2;
 }
 
-header #primary-nav ul li:hover {
-  background-color: #42f1f756;
-  color: #2a2d34;
-  border-radius: 1.5vmin;
-
-}
-
 header #secondary-nav {
-  margin: 2% 0;
+  /* border: 3px solid #787878; */
+  /* margin: 2% 0; */
   width: 100%;
   height: 25%;
   justify-content: center;
+  align-items: flex-start;
 }
 
 header #secondary-nav ul {
@@ -154,9 +160,9 @@ nav ul {
 
 nav ul li:hover,
 nav ul li a:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
   transition: all .4s;
-  color: #009DDC;
+  color: #42F2F7;
 }
 
 ul.content {
