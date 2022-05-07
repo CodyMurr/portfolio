@@ -98,11 +98,11 @@ function renderList(arr) {
 function createSkillEl(skill) {
     let li = document.createElement('li');
     let img = document.createElement('img');
-    let h4 = document.createElement('h4');
+    let h3 = document.createElement('h3');
     img.src = skill.src;
-    h4.innerHTML = skill.name;
+    h3.innerHTML = skill.name;
     li.appendChild(img);
-    li.appendChild(h4);
+    li.appendChild(h3);
     skillSection.appendChild(li);
 }
 
