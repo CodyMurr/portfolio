@@ -13,6 +13,10 @@
   flex-direction: column;
 }
 
+.nav-shrink {
+  background-color: #42f1f700;
+}
+
 html {
   background-image: url('../assets/images/noise.png');
   scroll-behavior: smooth;
@@ -99,11 +103,15 @@ header #info p {
 }
 
 header #primary-nav {
-  position: absolute;
+  position: fixed;
+  width: 100vw;
   margin: 0;
-  height: 30px;
+  height: 50px;
   top: 0;
-  
+  background-color: #42f1f78f;
+  z-index: 1;
+  /* padding: 1.75%; */
+  transition: .5s;
 }
 
 header #primary-nav ul {
@@ -119,7 +127,9 @@ header #primary-nav ul li {
 }
 
 header #primary-nav ul li a{
-  color: #42F2F7;
+  color: #DEE2E6;
+  font-size: 1.4em;
+  transition: .5s;
   z-index: 2;
 }
 
@@ -268,9 +278,30 @@ nav ul li a:hover {
   margin-bottom: 1%;
 }
 
-#skills div.toggle input {
-  transform: scale(1.3);
+#skills div.toggle .container {
+  position: relative;
+  width: 35px;
+  height: 35px;
+}
+
+#skills div.toggle .container span.check {
+  position: absolute;
+  top: 0;
+  /* left: 0; */
+  height: 30px;
+  width: 30px;
+  background-color: #DEE2E6;
+  border-radius: 50%;
+}
+
+#skills div.toggle .container span.active {
+  background-color: #f53b4a;
+  border: 3px solid #DEE2E6;
+}
+
+#skills div.toggle .container .check:hover {
   cursor: pointer;
+  background-color: #85888a;
 }
 
 #contact {

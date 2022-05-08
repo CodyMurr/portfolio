@@ -63,15 +63,17 @@ const skills = {
   }]
 };
 
-let initialGroup, activeGroup, currentGroup;
+let initialGroup, activeGroup, currentGroup, inactive;
 
 const skillSection = document.querySelector('.content')
 const toggleEl = document.querySelector('.toggle');
-const inputs = Array.from(document.querySelectorAll('div.toggle > input'));
+const inputs = Array.from(document.querySelectorAll('.toggle > .container > span'));
+const navbar = document.getElementById('primary-nav');
+const navLinks = [...document.querySelectorAll('.site > li > a')]
 
 toggleEl.addEventListener('click', function(e) {
-  if (!e.target.value) return
-  activeGroup = e.target.value;
+  if (!e.target.id) return;
+  activeGroup = e.target.id;
   render();
 })
 
@@ -85,8 +87,13 @@ function init() {
 }
 
 function render() {
-  currentGroup = inputs.find(inp => inp.value === activeGroup);
-  currentGroup.checked = true;
+  currentGroup = inputs.find(inp => inp.id === activeGroup);
+  inactive = inputs.find(inp => inp.id !== activeGroup)
+  document.getElementById(currentGroup.id).classList.add('active');
+  inactive.classList.remove('active')
+  console.log(inactive)
+  
+  
   renderList(skills[activeGroup]);
 }
 
@@ -96,20 +103,28 @@ function renderList(arr) {
 }
 
 function createSkillEl(skill) {
-    let li = document.createElement('li');
-    let img = document.createElement('img');
-    let h3 = document.createElement('h3');
-    img.src = skill.src;
-    h3.innerHTML = skill.name;
-    li.appendChild(img);
-    li.appendChild(h3);
-    skillSection.appendChild(li);
+  let li = document.createElement('li');
+  let img = document.createElement('img');
+  let h3 = document.createElement('h3');
+  img.src = skill.src;
+  h3.innerHTML = skill.name;
+  li.appendChild(img);
+  li.appendChild(h3);
+  skillSection.appendChild(li);
 }
 
 function clearList() {
   skillSection.replaceChildren();
 }
 
-// skills.forEach((skill) => {
-// });
-
+function shrinkNav() {
+  if (!navbar) return;
+  if (window.scrollY <= 50) {
+    navbar.style.padding = '2.75%';
+    navLinks.forEach(l => l.style.fontSize = '1.35em')
+  } else {
+    navbar.style.padding = '0';
+    navLinks.forEach(l => l.style.fontSize = '1em');
+  }
+}
+window.addEventListener('scroll', shrinkNav)
