@@ -165,7 +165,8 @@ const projects = [
 		'source code':
 			'https://github.com/CodyMurr/random-password-generator',
 		deployment: 'https://secure-generator.netlify.app/',
-		description: '',
+		description:
+			'Front-end React app that generates a new series of randomized characters based on user input.',
 	},
 	{
 		name: 'Simon',
@@ -173,40 +174,41 @@ const projects = [
 		technologies: ['HTML5', 'CSS3', 'Javascript', 'GH-Pages'],
 		'source code': 'https://github.com/CodyMurr/Simon',
 		deployment: 'https://codymurr.github.io/Simon/',
-		description: '',
+		description:
+			'A functional clone of the popular HASBRO memory game. Batteries not included.',
 	},
-	{
-		name: 'Rock, Paper, Scissors',
-		image: '../assets/images/rps.png',
-		technologies: ['HTML5', 'CSS3', 'Javascript', 'GH-Pages'],
-		'source code': 'https://github.com/CodyMurr/RPS',
-		deployment: 'https://codymurr.github.io/RPS/',
-		description: '',
-	},
-	{
-		name: 'Tic-Tac-Toe',
-		image: '../assets/images/ttt.jpeg',
-		technologies: ['HTML5', 'CSS3', 'Javascript', 'GH-Pages'],
-		'source code': 'https://github.com/CodyMurr/tic-tac-toe',
-		deployment: 'https://codymurr.github.io/tic-tac-toe/',
-		description: '',
-	},
-	{
-		name: 'Magic Drawing Board',
-		image: '../assets/images/drawingboard.png',
-		technologies: ['HTML5', 'CSS3', 'Javascript', 'GH-Pages'],
-		'source code': 'https://github.com/CodyMurr/magic-drawing-board',
-		deployment: 'https://codymurr.github.io/magic-drawing-board/',
-		description: '',
-	},
-	{
-		name: 'Calculator',
-		image: '../assets/images/calc.png',
-		technologies: ['HTML5', 'CSS3', 'Javascript', 'GH-Pages'],
-		'source code': 'https://github.com/CodyMurr/Calculator',
-		deployment: 'https://codymurr.github.io/Calculator/',
-		description: '',
-	},
+	// {
+	// 	name: 'Rock, Paper, Scissors',
+	// 	image: '../assets/images/rps.png',
+	// 	technologies: ['HTML5', 'CSS3', 'Javascript', 'GH-Pages'],
+	// 	'source code': 'https://github.com/CodyMurr/RPS',
+	// 	deployment: 'https://codymurr.github.io/RPS/',
+	// 	description: '',
+	// },
+	// {
+	// 	name: 'Tic-Tac-Toe',
+	// 	image: '../assets/images/ttt.jpeg',
+	// 	technologies: ['HTML5', 'CSS3', 'Javascript', 'GH-Pages'],
+	// 	'source code': 'https://github.com/CodyMurr/tic-tac-toe',
+	// 	deployment: 'https://codymurr.github.io/tic-tac-toe/',
+	// 	description: '',
+	// },
+	// {
+	// 	name: 'Magic Drawing Board',
+	// 	image: '../assets/images/drawingboard.png',
+	// 	technologies: ['HTML5', 'CSS3', 'Javascript', 'GH-Pages'],
+	// 	'source code': 'https://github.com/CodyMurr/magic-drawing-board',
+	// 	deployment: 'https://codymurr.github.io/magic-drawing-board/',
+	// 	description: '',
+	// },
+	// {
+	// 	name: 'Calculator',
+	// 	image: '../assets/images/calc.png',
+	// 	technologies: ['HTML5', 'CSS3', 'Javascript', 'GH-Pages'],
+	// 	'source code': 'https://github.com/CodyMurr/Calculator',
+	// 	deployment: 'https://codymurr.github.io/Calculator/',
+	// 	description: '',
+	// },
 	// {name: '', technologies: [], 'source code': '', deployment: '', description: ''},
 ];
 
@@ -223,17 +225,22 @@ function listProjects(p) {
 	h3.innerHTML = p.name;
 	section1.appendChild(h3);
 	let ul = document.createElement('ul');
-	let label = document.createElement('strong');
-	label.innerHTML = 'Technologies Used: ';
-	ul.appendChild(label);
-	p.technologies.map((item, idx) => {
-		let li = document.createElement('li');
+	let label1 = document.createElement('strong');
+	label1.innerHTML = 'Technologies Used: ';
+	let label2 = document.createElement('strong');
+	label2.innerHTML = 'Overview: ';
+	let description = document.createElement('p');
+	description.innerHTML = p.description;
+	// ul.appendChild(label1);
+	// p.technologies.map((item, idx) => {
+	// 	let li = document.createElement('li');
 
-		li.innerHTML = ` ${item}`;
+	// 	li.innerHTML = ` ${item}`;
 
-		ul.appendChild(li);
-	});
-	section1.appendChild(ul);
+	// 	ul.appendChild(li);
+	// });
+	// section1.appendChild(ul);
+	section1.appendChild(description);
 
 	let img = document.createElement('img');
 	img.src = p.image;
