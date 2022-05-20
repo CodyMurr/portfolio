@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  background-image: url('../assets/images/noise.png');
+  scroll-behavior: smooth;
+  overflow: scroll;
+    body {
+        font-family: "Coda";
+        background-color: #2a2d34cc;
+        color: #dee2e6;
+    }
+}
