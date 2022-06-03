@@ -348,14 +348,17 @@ nav ul li a:hover {
 	flex-direction: row;
 	justify-content: space-evenly;
 	background-color: #2e2b2b9a;
+	border-bottom-left-radius: 1.5vmin;
+	border-bottom-right-radius: 1.5vmin;
 	bottom: 0;
 } 
 
 #portfolio .portfolio-container section.contain section.icons a,
+#portfolio .portfolio-container section.contain section.icons i,
 #portfolio .portfolio-container section.contain section.icons a:active {
-	font-size: 2em;
 	color: #42f2f7;
-
+	font-size: 1.5em;
+	cursor: pointer;
 }
 
 #contact {
@@ -401,6 +404,7 @@ nav ul li a:hover {
 	font-size: 1.5em;
 	font-weight: 600;
 	border-radius: 0.5rem;
+	cursor: pointer;
 }
 
 #contact div {
@@ -426,4 +430,22 @@ footer {
 	color: #484848;
 	justify-content: space-evenly;
 	align-items: center;
+}
+
+a.jump-to-top {
+	position: fixed;
+	right: 5%;
+	bottom: 2%;
+	width: 14vmin;
+	height: 5vmin;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.25em;
+	background-color:#2a2d34cc;
+	color:#00cff3;
+	visibility: hidden;
+}
+
+a.jump-to-top:hover {
+	background-color: #2a2d34fd;
 }

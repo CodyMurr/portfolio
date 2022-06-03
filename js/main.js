@@ -121,15 +121,22 @@ function clearList() {
 }
 
 function shrinkNav() {
+  const jump = document.querySelector('.jump-to-top');
   if (!navbar) return;
-  if (window.scrollY <= 50) {
+  if (window.scrollY <= 150) {
     navbar.style.padding = '2.75%';
     navLinks.forEach((l) => (l.style.fontSize = '1.35em'));
   } else {
     navbar.style.padding = '0';
     navLinks.forEach((l) => (l.style.fontSize = '1em'));
   }
+  if (window.scrollY <= 450) {
+    jump.style.visibility = 'hidden';
+  } else {
+    jump.style.visibility = 'visible';
+  }
 }
+
 window.addEventListener('scroll', shrinkNav);
 
 const projects = [
@@ -176,39 +183,6 @@ const projects = [
     description:
       'A functional clone of the popular HASBRO memory game. Batteries not included.',
   },
-  // {
-  // 	name: 'Rock, Paper, Scissors',
-  // 	image: '../assets/images/rps.png',
-  // 	technologies: ['HTML5', 'CSS3', 'Javascript', 'GH-Pages'],
-  // 	'source code': 'https://github.com/CodyMurr/RPS',
-  // 	deployment: 'https://codymurr.github.io/RPS/',
-  // 	description: '',
-  // },
-  // {
-  // 	name: 'Tic-Tac-Toe',
-  // 	image: '../assets/images/ttt.jpeg',
-  // 	technologies: ['HTML5', 'CSS3', 'Javascript', 'GH-Pages'],
-  // 	'source code': 'https://github.com/CodyMurr/tic-tac-toe',
-  // 	deployment: 'https://codymurr.github.io/tic-tac-toe/',
-  // 	description: '',
-  // },
-  // {
-  // 	name: 'Magic Drawing Board',
-  // 	image: '../assets/images/drawingboard.png',
-  // 	technologies: ['HTML5', 'CSS3', 'Javascript', 'GH-Pages'],
-  // 	'source code': 'https://github.com/CodyMurr/magic-drawing-board',
-  // 	deployment: 'https://codymurr.github.io/magic-drawing-board/',
-  // 	description: '',
-  // },
-  // {
-  // 	name: 'Calculator',
-  // 	image: '../assets/images/calc.png',
-  // 	technologies: ['HTML5', 'CSS3', 'Javascript', 'GH-Pages'],
-  // 	'source code': 'https://github.com/CodyMurr/Calculator',
-  // 	deployment: 'https://codymurr.github.io/Calculator/',
-  // 	description: '',
-  // },
-  // {name: '', technologies: [], 'source code': '', deployment: '', description: ''},
 ];
 
 const portfolio = document.querySelector('#portfolio div.portfolio-container');
@@ -277,6 +251,9 @@ function listProjects(project) {
       if (el.className === 'img-link') container.appendChild(el);
     });
   });
+  //   const info = document.createElement('i');
+  //   info.className = 'fa-solid fa-circle-info';
+  //   iconContainer.appendChild(info);
   container.appendChild(iconContainer);
   portfolio.appendChild(container);
 }
