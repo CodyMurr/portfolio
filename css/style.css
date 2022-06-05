@@ -192,6 +192,7 @@ main section {
 	margin: 7% 0;
 }
 section h2 {
+	color: #00cff3;
 	letter-spacing: 2px;
 }
 
@@ -257,7 +258,7 @@ nav ul li a:hover {
 }
 
 #about p span {
-	color: #00cff3;
+	color: #ff7682;
 }
 
 #skills ul.content {
