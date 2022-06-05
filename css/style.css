@@ -124,8 +124,8 @@ header #primary-nav ul li {
 
 header #primary-nav ul li a {
 	color: #6e6e6e;
-	font-size: 1.75em;
-	font-weight: 700;
+	font-size: 1.65em;
+	font-weight: 600;
 	letter-spacing: 2px;
 	transition: 0.5s;
 	z-index: 2;
@@ -258,7 +258,7 @@ nav ul li a:hover {
 }
 
 #about p span {
-	color: #ff7682;
+	color: #17ffc9;
 }
 
 #skills ul.content {
