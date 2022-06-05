@@ -33,7 +33,7 @@ body {
 header {
 	align-items: center;
 	justify-content: center;
-	height: 90vh;
+	height: 60vh;
 	position: relative;
 }
 
@@ -186,10 +186,10 @@ header #info {
 	flex-direction: column;
 }
 
-section {
+main section {
 	justify-content: center;
-	/* border: 3px solid #787878; */
 	align-items: center;
+	margin: 7% 0;
 }
 section h2 {
 	letter-spacing: 2px;
@@ -222,29 +222,42 @@ nav ul li a:hover {
 	transition: all 0.4s;
 	color: #42f2f7;
 }
-
+/* #about,
 #skills,
 #portfolio,
 #contact {
-	margin-top: 5%;
-}
+	margin-top: 8%;
+} */
 
-#about .bio {
+#intro .bio {
 	display: flex;
 	justify-content: space-evenly;
 }
 
-#about .bio img {
+#intro .bio img {
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
 	transform: rotate(20deg);
 }
 
-#about .bio p {
+#intro .bio p {
 	text-align: justify;
 	width: 45%;
 	font-size: 1.5em;
+	letter-spacing: 1px;
+
+}
+
+#about p {
+	text-align: justify;
+	width: 65%;
+	font-size: 1.75em;
+	letter-spacing: 1px;
+}
+
+#about p span {
+	color: #00cff3;
 }
 
 #skills ul.content {
@@ -285,10 +298,10 @@ nav ul li a:hover {
 
 #skills div.toggle {
 	display: flex;
-	width: 10%;
-	height: 50px;
+	width: 250px;
+	height: 150px;
 	justify-content: space-evenly;
-	align-items: center;
+	align-items: flex-end;
 	margin-bottom: 1%;
 }
 
@@ -301,7 +314,7 @@ nav ul li a:hover {
 #skills div.toggle .container span.check {
 	position: absolute;
 	top: 0;
-	/* left: 0; */
+	bottom: 0;
 	height: 30px;
 	width: 30px;
 	background-color: #dee2e6;
@@ -345,6 +358,7 @@ nav ul li a:hover {
 
 #portfolio .portfolio-container section.contain section.icons {
 	position: absolute;
+	margin: 0;
 	flex-direction: row;
 	justify-content: space-evenly;
 	background-color: #2e2b2b9a;

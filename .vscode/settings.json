@@ -1,6 +1,7 @@
 {
-    "editor.cursorStyle": "block",
+    "editor.cursorStyle": "line",
     "css.styleSheets": [
     
-    ]
+    ],
+    "editor.cursorBlinking": "blink"
 }
