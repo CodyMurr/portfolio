@@ -444,13 +444,43 @@ footer {
 	background-color: #42f1f79f;
 	color: #484848;
 	justify-content: space-evenly;
+	padding-left: 5%;
 	align-items: center;
+}
+
+footer div {
+	width: 50%;
+	height: 100%;
+	align-items: center;
+}
+
+#ftr-info {
+	justify-content: flex-start;
+	
+}
+#ftr-info h3 {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+#ftr-links {
+	justify-content: flex-end;
+}
+#ftr-links a {
+	margin: 5%;
+
+}
+
+footer div a img {
+	width: 40px;
+	height: 40px;
+	/* margin-right: 7%; */
 }
 
 a.jump-to-top {
 	position: fixed;
-	right: 5%;
-	bottom: 2%;
+	/* right: 5%; */
+	bottom: 4%;
 	width: 14vmin;
 	height: 5vmin;
 	justify-content: center;
