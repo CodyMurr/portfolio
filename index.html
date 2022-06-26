@@ -75,7 +75,8 @@
         <section id="contact" class="flex col">
             <h2>Contact Me</h2>
             <hr/>
-            <form name='contact' class='flex col' data-netlify-recaptcha="true" data-netlify="true">
+            <form name='contact' class='flex col' netlify-honeypot="bot-detection" data-netlify="true">
+                <input type="hidden" name="bot-detection">
                 <label for="name" class='flex col'>Your Name: 
                     <input type="text" name="name" autocapitalize="true" autocomplete="off" required/>
                 </label>
@@ -89,7 +90,6 @@
                     <textarea name="message" autocomplete="off" required></textarea>
                 </label>
                 <button type="submit" class='flex'>Submit</button>
-                <div data-netlify-recaptcha="true"></div>
             </form>
             <div class="flex">
                 <section class="phone flex col">
