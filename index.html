@@ -29,24 +29,7 @@
         </div>
         <hr>
         <nav id="secondary-nav" class='flex'>
-        <!-- <ul id="links" class='flex'>
-            <li class='flex'>
-                <a href="https://github.com/CodyMurr" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
-                </a>
-            </li>
-
-            <li class='flex'>
-                <a href="https://www.linkedin.com/in/cody-w-murray/" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" />
-                </a>
-            </li>
-            <li class='flex'>
-                <a href="https://codepen.io/CodeMur93" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codepen/codepen-plain.svg" />
-                </a>
-            </li>
-        </ul> -->
+        
         <aside class="flex btns">
             <a href="assets/resume/Resume.pdf" class="flex btn" target="_blank">View Resume</a>
             <a href="#contact" class="flex btn">Contact Me</a>
@@ -92,7 +75,7 @@
         <section id="contact" class="flex col">
             <h2>Contact Me</h2>
             <hr/>
-            <form name='contact' class='flex col' data-netlify="true" >
+            <form name='contact' class='flex col' data-netlify-recaptcha="true" data-netlify="true">
                 <label for="name" class='flex col'>Your Name: 
                     <input type="text" name="name" autocapitalize="true" autocomplete="off" required/>
                 </label>
@@ -106,6 +89,7 @@
                     <textarea name="message" autocomplete="off" required></textarea>
                 </label>
                 <button type="submit" class='flex'>Submit</button>
+                <div data-netlify-recaptcha="true"></div>
             </form>
             <div class="flex">
                 <section class="phone flex col">
