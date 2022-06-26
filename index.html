@@ -29,7 +29,7 @@
         </div>
         <hr>
         <nav id="secondary-nav" class='flex'>
-        <ul id="links" class='flex'>
+        <!-- <ul id="links" class='flex'>
             <li class='flex'>
                 <a href="https://github.com/CodyMurr" target="_blank">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
@@ -46,7 +46,7 @@
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codepen/codepen-plain.svg" />
                 </a>
             </li>
-        </ul>
+        </ul> -->
         <aside class="flex btns">
             <a href="assets/resume/Resume.pdf" class="flex btn" target="_blank">View Resume</a>
             <a href="#contact" class="flex btn">Contact Me</a>
@@ -59,7 +59,7 @@
             <h2>A Brief Intro</h2>
             <hr />
             <div class="flex bio">
-                <img id="intro-img" src="./assets/images/main.jpeg" alt="">
+                <img id="intro-img" src="./assets/images/selfie.jpg" alt="">
                 <p>I'm a recent graduate of General Assembly's Software Engineering Immersive with a passion for bringing ideas to life. As a student of GA, I was introduced to the fundamentals of full stack web development and the mindset necessary to begin my journey in tech. </p>
             </div>
 
@@ -94,16 +94,16 @@
             <hr/>
             <form name='contact' class='flex col' data-netlify="true" >
                 <label for="name" class='flex col'>Your Name: 
-                    <input type="text" name="name" autocapitalize="true" required/>
+                    <input type="text" name="name" autocapitalize="true" autocomplete="off" required/>
                 </label>
                 <label for="email" class='flex col'>Your Email: 
-                    <input type="email" name="email" autocapitalize="true" required/>
+                    <input type="email" name="email" autocapitalize="true" autocomplete="off" required/>
                 </label>
                 <label for="subject" class="flex col">Subject:
-                    <input type="text" name="subject" autocapitalize="true" />
+                    <input type="text" name="subject" autocapitalize="true" autocomplete="off" />
                 </label>
                 <label for="message" class='flex col'>Message:
-                    <textarea name="message" required></textarea>
+                    <textarea name="message" autocomplete="off" required></textarea>
                 </label>
                 <button type="submit" class='flex'>Submit</button>
             </form>
@@ -131,6 +131,9 @@
             </a>
             <a href="https://www.linkedin.com/in/cody-w-murray/" target="_blank">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" />
+            </a>
+            <a href="https://app.slack.com/client/T0351JZQ0/D02P34VU2P4/user_profile/U02PFPHNQ57" target="_blank">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg" />
             </a>
         </div>
     </footer>
