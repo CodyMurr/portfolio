@@ -355,10 +355,15 @@ nav ul li a:hover {
 }
 #portfolio .portfolio-container section.contain .img-link, 
 #portfolio .portfolio-container section.contain .img-link img
- {
+{
 	width: 689px;
 	height: 354px;
 }
+#portfolio .portfolio-container section.contain .img-link img {
+	border: 10px solid #5896d58a;
+	border-radius: 1rem;
+	/* box-shadow: 2px 2px #00cff3; */
+} 
 
 #portfolio .portfolio-container section.contain section.icons {
 	position: absolute;
